@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monocular Light Injection</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas></canvas>
+    <video autoplay muted playsinline></video>
+
+    <div class="status">
+      <div class="spinner"></div>
+      <p class="status-message">Preparing WebGPU…</p>
+    </div>
+
+    <div class="chooser" hidden>
+      <div class="chooser-panel">
+        <p class="chooser-heading">Source</p>
+        <div class="chooser-row source-row"></div>
+        <p class="chooser-heading">Depth model</p>
+        <div class="chooser-row model-row"></div>
+        <button class="start-button" type="button">start</button>
+        <p class="chooser-error" hidden></p>
+      </div>
+    </div>
+    <input class="photo-input" type="file" accept="image/*" hidden />
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
